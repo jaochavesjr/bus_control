@@ -30,7 +30,7 @@ module Admin::V1
     def client_params
       return {} unless params.has_key?(:client)
 
-      params.require(:client).permit(:id, :full_name, :rg, :cpf, :cellphone, :address, :complement,
+      params.require(:client).permit(:id, :full_name, :document, :cellphone, :address, :complement,
         :district, :city_id, :under_age, :responsible_id, :active)
     end
   end
