@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  rg: MyString
+  cpf: MyString
+  cellphone: MyString
+  address: MyString
+  complment: MyString
+  district: MyString
+  city: one
+  under_age: false
+  responsible: one
+
+two:
+  full_name: MyString
+  rg: MyString
+  cpf: MyString
+  cellphone: MyString
+  address: MyString
+  complment: MyString
+  district: MyString
+  city: two
+  under_age: false
+  responsible: two
