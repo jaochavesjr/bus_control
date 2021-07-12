@@ -6,7 +6,7 @@ class CreateClients < ActiveRecord::Migration[6.1]
       t.string :cpf
       t.string :cellphone
       t.string :address
-      t.string :complment
+      t.string :complement
       t.string :district
       t.references :city, null: false, foreign_key: true
       t.boolean :under_age

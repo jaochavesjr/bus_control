@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_07_11_232235) do
     t.string "cpf"
     t.string "cellphone"
     t.string "address"
-    t.string "complment"
+    t.string "complement"
     t.string "district"
     t.bigint "city_id", null: false
     t.boolean "under_age"

@@ -3,18 +3,10 @@
 Rails.application.routes.draw do
   namespace :admin do
     namespace :v1 do
-      get 'clients/index'
-      get 'clients/show'
-      get 'clients/create'
-      get 'clients/update'
-    end
-  end
-  namespace :admin do
-    namespace :v1 do
-      resources :clients
-      resources :vehicle
-      resources :drivers
-      resources :travels
+      resources :clients, only: %i[show update index create]
+      resources :vehicle, only: %i[show update index create]
+      resources :drivers, only: %i[show update index create]
+      resources :travels, only: %i[show update index create]
     end
   end
 end
