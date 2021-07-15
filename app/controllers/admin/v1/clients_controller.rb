@@ -2,6 +2,7 @@
 
 module Admin::V1
   class ClientsController < ApiController
+    before_action :authenticate_user!
     before_action :load_client, only: %i[show update]
     def index
       @clients = Client.all
