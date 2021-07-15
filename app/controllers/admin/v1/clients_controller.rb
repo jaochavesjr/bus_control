@@ -12,13 +12,24 @@ module Admin::V1
     def create
       @client = Client.new
       @client.attributes = client_params
-      @client.save!
-      render :show
+      if @client.save
+        render :show
+      else
+        render json: {
+          message: @client.errors.full_messages
+        }, status: 500
+      end
     end
 
     def update
       @client.attributes = client_params
-      @client.save!
+      if @client.save
+        render :show
+      else
+        render json: {
+          message: @client.errors.full_messages
+        }, status: 500
+      end
     end
 
     private
@@ -30,7 +41,7 @@ module Admin::V1
     def client_params
       return {} unless params.has_key?(:client)
 
-      params.require(:client).permit(:id, :full_name, :document, :cellphone, :address, :complement,
+      params.require(:client).permit(:id, :full_name, :type_ducument, :document, :cellphone, :address, :complement,
         :district, :city_id, :under_age, :responsible_id, :active)
     end
   end
