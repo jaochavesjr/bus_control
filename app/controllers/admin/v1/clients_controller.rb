@@ -40,7 +40,7 @@ module Admin::V1
 
     def client_params
       params.require(:client).permit(:id, :full_name, :document, :cellphone, :address, :complement,
-        :district, :city_id, :under_age, :responsible_id, :active, :type_document)
+        :district, :city_id, :under_age, :responsible_id, :active, :type_document, :date)
     end
   end
 end
