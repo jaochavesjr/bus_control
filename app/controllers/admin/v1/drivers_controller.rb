@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Admin::V1
-  class Admin::V1::DriversController < ApplicationController
+  class Admin::V1::DriversController < ApiController
     before_action :load_driver, only: %i[show update]
     def index
       @drivers = Driver.all
