@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class TypeOfPayment < ApplicationRecord
-  enum type: { cash: 1, debit_card: 2, credit_card: 3, pix: 4 }
+  has_enumeration_for :type, with: TypePayments, create_helpers: true, create_scopes: true
 end
