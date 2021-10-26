@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 json.travels do
-  json.array! @travels, :id, :vehicle_id, :driver_id, :origin_id, :destination_id, :date, :status
+  json.array! @travels do |travel|
+    json.partial! travel
+    # json.partial! travel.vehicle
+    # json.partial! travel.driver
+  end
 end
